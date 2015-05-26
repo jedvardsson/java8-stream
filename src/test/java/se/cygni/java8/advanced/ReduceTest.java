@@ -1,13 +1,11 @@
-package se.cygni.java8.streams;
+package se.cygni.java8.advanced;
 
 import org.junit.Test;
 import se.cygni.java8.golf.Golfer;
 import se.cygni.java8.golf.TestUtil;
 
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class ReduceTest {

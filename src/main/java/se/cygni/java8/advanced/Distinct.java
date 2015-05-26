@@ -1,8 +1,6 @@
-package se.cygni.java8.streams;
+package se.cygni.java8.advanced;
 
-import java.util.Collection;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collector;

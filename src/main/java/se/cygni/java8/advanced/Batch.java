@@ -1,4 +1,4 @@
-package se.cygni.java8.streams;
+package se.cygni.java8.advanced;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +13,9 @@ public final class Batch {
     private Batch() {
     }
 
+    /**
+     * Returns a stream of collections of batchSize or smaller.
+     */
     public static <T> Stream<Collection<T>> of(Collection<T> collection, int batchSize) {
         return of(collection.spliterator(), batchSize);
     }
