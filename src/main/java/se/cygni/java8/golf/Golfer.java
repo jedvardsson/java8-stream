@@ -70,4 +70,29 @@ public class Golfer {
     public String toString() {
         return name + "(" + hcp + ", " + country + ",  $" + money + ")";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Golfer golfer = (Golfer) o;
+
+        if (hcp != golfer.hcp) return false;
+        if (money != golfer.money) return false;
+        if (name != null ? !name.equals(golfer.name) : golfer.name != null) return false;
+        if (gender != golfer.gender) return false;
+        return country == golfer.country;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + hcp;
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
+        result = 31 * result + (country != null ? country.hashCode() : 0);
+        result = 31 * result + money;
+        return result;
+    }
 }

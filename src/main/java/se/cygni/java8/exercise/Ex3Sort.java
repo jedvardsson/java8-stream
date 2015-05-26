@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 
-public class Ex3_Sort {
+public class Ex3Sort {
 
     public static List<Golfer> sortByName(List<Golfer> golfers) {
         return golfers.stream()

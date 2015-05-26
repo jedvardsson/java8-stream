@@ -15,7 +15,7 @@ import static se.cygni.java8.golf.Country.US;
 import static se.cygni.java8.golf.Gender.FEMALE;
 import static se.cygni.java8.golf.Gender.MALE;
 
-public class Ex1_MapAndSum {
+public class Ex1MapAndSum {
 
     public static Optional<Golfer> findFirstGolfer(List<Golfer> golfers) {
         return golfers.stream().findFirst();

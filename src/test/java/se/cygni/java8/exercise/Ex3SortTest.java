@@ -11,13 +11,13 @@ import java.util.List;
 
 import static se.cygni.java8.JsonAssert.assertJsonEquals;
 
-public class Ex3_SortTest {
+public class Ex3SortTest {
 
     private List<Golfer> golfers;
 
     @Before
     public void before() throws Exception {
-        golfers = Ex1_MapAndSumTest.createGolfers();
+        golfers = Ex1MapAndSumTest.createGolfers();
     }
 
     @Test
@@ -29,7 +29,7 @@ public class Ex3_SortTest {
                 return g1.getName().compareTo(g2.getName());
             }
         });
-        assertJsonEquals(expected, Ex3_Sort.sortByName(golfers));
+        assertJsonEquals(expected, Ex3Sort.sortByName(golfers));
     }
 
     @Test
@@ -45,7 +45,7 @@ public class Ex3_SortTest {
                 return i;
             }
         });
-        assertJsonEquals(expected, Ex3_Sort.sortByHcpAndName(golfers));
+        assertJsonEquals(expected, Ex3Sort.sortByHcpAndName(golfers));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class Ex3_SortTest {
                 }
             }
         }
-        assertJsonEquals(min, Ex3_Sort.findFemaleGolferWithLowestHcp(golfers).orElse(null));
+        assertJsonEquals(min, Ex3Sort.findFemaleGolferWithLowestHcp(golfers).orElse(null));
     }
 
     @Test
@@ -77,6 +77,6 @@ public class Ex3_SortTest {
         for (Golfer golfer : expected) {
             expectedNames.add(golfer.getName());
         }
-        assertJsonEquals(expectedNames, Ex3_Sort.findNamesOfTop3Earners(golfers));
+        assertJsonEquals(expectedNames, Ex3Sort.findNamesOfTop3Earners(golfers));
     }
 }
