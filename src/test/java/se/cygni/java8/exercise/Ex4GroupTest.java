@@ -14,7 +14,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static se.cygni.java8.JsonAssert.assertJsonEquals;
 
 public class Ex4GroupTest {

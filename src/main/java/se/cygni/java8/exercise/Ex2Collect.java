@@ -1,10 +1,8 @@
 package se.cygni.java8.exercise;
 
 import se.cygni.java8.golf.Golfer;
-import se.cygni.java8.golf.Level;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Ex2Collect {

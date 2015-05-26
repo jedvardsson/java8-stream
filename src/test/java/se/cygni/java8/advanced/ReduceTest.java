@@ -4,7 +4,11 @@ import org.junit.Test;
 import se.cygni.java8.golf.Golfer;
 import se.cygni.java8.golf.TestUtil;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

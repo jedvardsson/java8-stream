@@ -4,7 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 import se.cygni.java8.JsonAssert;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 

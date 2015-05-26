@@ -3,7 +3,6 @@ package se.cygni.java8.golf;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Comparator;
 import java.util.List;
 
 import static java.util.Comparator.comparing;

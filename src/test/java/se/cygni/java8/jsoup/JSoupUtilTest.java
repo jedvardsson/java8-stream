@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.concurrent.Callable;
 import java.util.function.Function;

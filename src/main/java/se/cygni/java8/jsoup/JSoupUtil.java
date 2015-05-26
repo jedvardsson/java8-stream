@@ -2,7 +2,13 @@ package se.cygni.java8.jsoup;
 
 import org.jsoup.nodes.Node;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Spliterator;
+import java.util.Spliterators;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;

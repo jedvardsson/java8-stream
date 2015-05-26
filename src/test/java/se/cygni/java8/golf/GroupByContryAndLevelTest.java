@@ -1,12 +1,12 @@
 package se.cygni.java8.golf;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;

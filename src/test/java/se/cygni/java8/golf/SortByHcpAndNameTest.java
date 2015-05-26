@@ -3,7 +3,8 @@ package se.cygni.java8.golf;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
 
 public class SortByHcpAndNameTest {
 

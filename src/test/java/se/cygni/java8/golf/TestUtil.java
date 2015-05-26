@@ -2,12 +2,14 @@ package se.cygni.java8.golf;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import se.cygni.java8.golf.Golfer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static se.cygni.java8.golf.Country.*;
+import static se.cygni.java8.golf.Country.DK;
+import static se.cygni.java8.golf.Country.NO;
+import static se.cygni.java8.golf.Country.SE;
+import static se.cygni.java8.golf.Country.US;
 import static se.cygni.java8.golf.Gender.FEMALE;
 import static se.cygni.java8.golf.Gender.MALE;
 
