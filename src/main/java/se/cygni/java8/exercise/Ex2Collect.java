@@ -8,21 +8,14 @@ import java.util.stream.Collectors;
 public class Ex2Collect {
 
     public static List<Golfer> findGolfersAboveHcp30(List<Golfer> golfers) {
-        return golfers.stream().filter(g -> g.getHcp() > 30).collect(Collectors.toList());
+        return null;
     }
 
     public static List<String> findNamesOfFirst3GolfersAboveHcp30(List<Golfer> golfers) {
-        return golfers.stream()
-                .filter(g -> g.getHcp() > 30)
-                .limit(3)
-                .map(Golfer::getName)
-                .collect(Collectors.toList());
+        return null;
     }
 
     public static String joinNamesOfFemaleGolfers(List<Golfer> golfers) {
-        return golfers.stream()
-                .filter(Golfer::isFemale)
-                .map(Golfer::getName)
-                .collect(Collectors.joining(", "));
+        return null;
     }
 }

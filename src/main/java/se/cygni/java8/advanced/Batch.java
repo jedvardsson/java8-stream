@@ -40,34 +40,17 @@ public final class Batch {
 
         @Override
         public boolean tryAdvance(Consumer<? super Collection<T>> action) {
-            List<T> batch = new ArrayList<>((int) Math.min(batchSize, spliterator.estimateSize()));
-            int count = 0;
-            while (count < batchSize && spliterator.tryAdvance(batch::add)) {
-                count++;
-            }
-            boolean applyAction = batch.size() > 0;
-            if (applyAction) {
-                action.accept(batch);
-            }
-            return applyAction;
+            return false;
         }
 
         @Override
         public Spliterator<Collection<T>> trySplit() {
-            Spliterator<T> other = spliterator.trySplit();
-            if (other == null) {
-                return null;
-            }
-            return new BatchSpliterator<>(other, batchSize);
+            return null;
         }
 
         @Override
         public long estimateSize() {
-            long l = spliterator.estimateSize();
-            if (l == Long.MAX_VALUE) {
-                return l;
-            }
-            return l / batchSize;
+            return -1;  // Implement this
         }
 
         @Override

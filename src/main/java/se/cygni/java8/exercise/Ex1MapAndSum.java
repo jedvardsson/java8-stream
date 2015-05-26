@@ -8,27 +8,27 @@ import java.util.Optional;
 public class Ex1MapAndSum {
 
     public static Optional<Golfer> findFirstGolfer(List<Golfer> golfers) {
-        return golfers.stream().findFirst();
+        return null;
     }
 
     public static Optional<Integer> findFirstGolferHcp(List<Golfer> golfers) {
-        return golfers.stream().findFirst().map(Golfer::getHcp);
+        return null;
     }
 
     public static Optional<String> findNameOfFirstAboveHcp30(List<Golfer> golfers) {
-        return golfers.stream().filter(g -> g.getHcp() > 30).findFirst().map(Golfer::getName);
+        return null;
     }
 
     public static int sumOfMoney(List<Golfer> golfers) {
-        return golfers.stream().mapToInt(Golfer::getMoney).sum();
+        return 0;
     }
 
     public static int averageHcp(List<Golfer> golfers) {
-        return (int) golfers.stream().mapToInt(Golfer::getHcp).summaryStatistics().getAverage();
+        return 0;
     }
 
     public static int sumOfLettersInNames(List<Golfer> golfers) {
-        return golfers.stream().map(Golfer::getName).mapToInt(String::length).sum();
+        return 0;
     }
 
 }
