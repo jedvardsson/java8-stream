@@ -15,7 +15,7 @@ import static se.cygni.java8.golf.Country.US;
 import static se.cygni.java8.golf.Gender.FEMALE;
 import static se.cygni.java8.golf.Gender.MALE;
 
-public class Ex1 {
+public class Ex1_MapAndSum {
 
     public static Optional<Golfer> findFirstGolfer(List<Golfer> golfers) {
         return golfers.stream().findFirst();
@@ -36,4 +36,9 @@ public class Ex1 {
     public static int averageHcp(List<Golfer> golfers) {
         return (int) golfers.stream().mapToInt(Golfer::getHcp).summaryStatistics().getAverage();
     }
+
+    public static int sumOfLettersInNames(List<Golfer> golfers) {
+        return golfers.stream().map(Golfer::getName).mapToInt(String::length).sum();
+    }
+
 }

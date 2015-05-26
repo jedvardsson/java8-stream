@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class Ex2 {
+public class Ex2_Collect {
 
     public static List<Golfer> findGolfersAboveHcp30(List<Golfer> golfers) {
         return golfers.stream().filter(g -> g.getHcp() > 30).collect(Collectors.toList());

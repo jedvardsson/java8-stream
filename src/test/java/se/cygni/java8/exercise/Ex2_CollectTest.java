@@ -9,15 +9,13 @@ import se.cygni.java8.golf.Golfer;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
-public class Ex2Test {
+public class Ex2_CollectTest {
 
     private List<Golfer> golfers;
 
     @Before
     public void before() throws Exception {
-        golfers = Ex1Test.createGolfers();
+        golfers = Ex1_MapAndSumTest.createGolfers();
     }
 
     @Test
@@ -28,7 +26,7 @@ public class Ex2Test {
                 expected.add(golfer);
             }
         }
-        JsonAssert.assertJsonEquals(expected, Ex2.findGolfersAboveHcp30(this.golfers));
+        JsonAssert.assertJsonEquals(expected, Ex2_Collect.findGolfersAboveHcp30(this.golfers));
     }
 
     @Test
@@ -39,7 +37,7 @@ public class Ex2Test {
                 expected.add(golfer.getName());
             }
         }
-        JsonAssert.assertJsonEquals(expected, Ex2.findNamesOfFirst3GolfersAboveHcp30(this.golfers));
+        JsonAssert.assertJsonEquals(expected, Ex2_Collect.findNamesOfFirst3GolfersAboveHcp30(this.golfers));
     }
 
     @Test
@@ -55,6 +53,6 @@ public class Ex2Test {
                 i++;
             }
         }
-        Assert.assertEquals(buf.toString(), Ex2.joinNamesOfFemaleGolfers(this.golfers));
+        Assert.assertEquals(buf.toString(), Ex2_Collect.joinNamesOfFemaleGolfers(this.golfers));
     }
 }

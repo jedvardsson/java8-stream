@@ -18,7 +18,7 @@ import static se.cygni.java8.golf.Country.US;
 import static se.cygni.java8.golf.Gender.FEMALE;
 import static se.cygni.java8.golf.Gender.MALE;
 
-public class Ex1Test {
+public class Ex1_MapAndSumTest {
 
     private List<Golfer> golfers;
 
@@ -60,19 +60,19 @@ public class Ex1Test {
 
     @Test
     public void testFindFirstGolfer() throws Exception {
-        Optional<Golfer> golfer = Ex1.findFirstGolfer(golfers);
+        Optional<Golfer> golfer = Ex1_MapAndSum.findFirstGolfer(golfers);
         Assert.assertEquals("Annika", golfer.map(Golfer::getName).orElse(null));
     }
 
     @Test
     public void testFindFirstGolferHcp() throws Exception {
-        Optional<Integer> hcp = Ex1.findFirstGolferHcp(createGolfers());
+        Optional<Integer> hcp = Ex1_MapAndSum.findFirstGolferHcp(createGolfers());
         Assert.assertEquals(-1, (int) hcp.orElse(Integer.MAX_VALUE));
     }
 
     @Test
     public void testFindNameOfFirstAboveHcp30() throws Exception {
-        Optional<String> name = Ex1.findNameOfFirstAboveHcp30(createGolfers());
+        Optional<String> name = Ex1_MapAndSum.findNameOfFirstAboveHcp30(createGolfers());
         Assert.assertEquals("Kurt", name.orElse(null));
 
 
@@ -84,7 +84,7 @@ public class Ex1Test {
         for (Golfer golfer : golfers) {
             sum += golfer.getMoney();
         }
-        Assert.assertEquals(sum, Ex1.sumOfMoney(golfers));
+        Assert.assertEquals(sum, Ex1_MapAndSum.sumOfMoney(golfers));
     }
 
     @Test
@@ -93,6 +93,15 @@ public class Ex1Test {
         for (Golfer golfer : golfers) {
             sum += golfer.getHcp();
         }
-        Assert.assertEquals(sum/golfers.size(), Ex1.averageHcp(golfers));
+        Assert.assertEquals(sum/golfers.size(), Ex1_MapAndSum.averageHcp(golfers));
+    }
+
+    @Test
+    public void testSumOfLettersInNames() throws Exception {
+        int sum = 0;
+        for (Golfer golfer : golfers) {
+            sum += golfer.getName().length();
+        }
+        Assert.assertEquals(sum, Ex1_MapAndSum.sumOfLettersInNames(golfers));
     }
 }
