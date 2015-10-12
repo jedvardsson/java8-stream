@@ -22,8 +22,6 @@ public class Match {
     }
 
     public static Predicate<? super Node> attr(String attr, String expectedValue) {
-        return n -> {
-            return Objects.equals(expectedValue, n.attr(attr));
-        };
+        return n -> Objects.equals(expectedValue, n.attr(attr));
     }
 }
