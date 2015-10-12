@@ -10,6 +10,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import static se.cygni.java8.JsonAssert.assertJsonEquals;
+import static se.cygni.java8.golf.Country.SE;
+import static se.cygni.java8.golf.Gender.FEMALE;
 
 public class Ex3SortTest {
 
@@ -22,14 +24,21 @@ public class Ex3SortTest {
 
     @Test
     public void testSortByName() throws Exception {
+        golfers.add(new Golfer(null, 23, FEMALE, SE, 0));
         List<Golfer> expected = new ArrayList<>(this.golfers);
+        List<Golfer> actual = Ex3Sort.sortByName(golfers);
         Collections.sort(expected, new Comparator<Golfer>() {
             @Override
             public int compare(Golfer g1, Golfer g2) {
+                if (g1.getName() == null) {
+                    return -1;
+                } else if (g2.getName() == null) {
+                    return 1;
+                }
                 return g1.getName().compareTo(g2.getName());
             }
         });
-        assertJsonEquals(expected, Ex3Sort.sortByName(golfers));
+        assertJsonEquals(expected, actual);
     }
 
     @Test
