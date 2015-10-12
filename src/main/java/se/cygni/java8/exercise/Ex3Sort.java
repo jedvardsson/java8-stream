@@ -8,12 +8,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
+import static java.util.Comparator.naturalOrder;
 
 public class Ex3Sort {
 
     public static List<Golfer> sortByName(List<Golfer> golfers) {
+        Comparator<Golfer> comparing = Comparator.comparing(Golfer::getName, Comparator.nullsFirst(naturalOrder()));
         return golfers.stream()
-                .sorted(comparing(Golfer::getName))
+                .sorted(comparing)
                 .collect(Collectors.toList());
     }
 
