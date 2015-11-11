@@ -2,6 +2,8 @@ package se.cygni.java8.exercise;
 
 import se.cygni.java8.golf.Golfer;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +18,16 @@ public class Ex1MapAndSum {
     }
 
     public static Optional<String> findNameOfFirstAboveHcp30(List<Golfer> golfers) {
-        return golfers.stream().filter(g -> g.getHcp() > 30).findFirst().map(Golfer::getName);
+        List<Object> collect = golfers.stream()
+                .filter(g -> g.getHcp() > 30)
+                .collect(
+                        LinkedList::new,
+                        (a, g) -> a.add(g),
+                        (a, b) -> a.addAll(b));
+
+
+//                .findFirst()
+//                .map(Golfer::getName);
     }
 
     public static int sumOfMoney(List<Golfer> golfers) {
